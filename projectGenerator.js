@@ -5,11 +5,13 @@ const message = {
 };
 
 
+
 for (let key in message) {
-    for (let i = 0; i < message[key].length; i++){
-        console.log(message[key][i]);
-    }
+    let num = Math.floor(Math.random() * message[key].length);
+    console.log(num)
+    console.log(message[key][num]);
 }
+
 
 
 
