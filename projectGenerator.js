@@ -5,16 +5,17 @@ const message = {
 };
 
 
-
-for (let key in message) {
-    let num = Math.floor(Math.random() * message[key].length);
-    console.log(num)
-    console.log(message[key][num]);
+const findOption = (i) => {
+    let num = Math.floor(Math.random() * message[i].length);
+    return message[i][num];
 }
 
+const returnMessage = () => {
+    let p = findOption("project");
+    let s = findOption("special");
+    let m = findOption("medium");
+    return("Make something " + p + " that is " + s + " out of " + m + ".");
+}
 
-
-
-
-
+console.log(returnMessage());
 
